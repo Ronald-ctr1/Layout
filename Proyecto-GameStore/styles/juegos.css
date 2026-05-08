@@ -1,0 +1,242 @@
+:root{
+
+    --color-principal: cyan;
+    --color-secundario: #0f172a;
+    --color-terciario: #111827;
+    --color-cuarto: #1e293b;
+
+    --blanco: white;
+    --negro: black;
+
+    --glass: rgba(255,255,255,0.08);
+
+}
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+    background: linear-gradient(
+        135deg,
+        var(--color-secundario),
+        var(--color-terciario),
+        var(--color-cuarto)
+    );
+
+    color: var(--blanco);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+}
+
+.navbar-brand{
+    color: var(--color-principal) !important;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.nav-link{
+    color: var(--blanco) !important;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: var(--color-principal) !important;
+}
+
+/* HERO */
+
+.hero{
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1{
+    font-size: 70px;
+    color: var(--color-principal);
+}
+
+.hero p{
+    font-size: 22px;
+}
+
+/* TITULO */
+
+.titulo{
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-principal);
+    font-size: 45px;
+}
+
+/* TABS */
+
+.tabs{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin-bottom: 50px;
+}
+
+.tab-btn{
+    background: var(--glass);
+    border: none;
+    color: var(--blanco);
+
+    padding: 12px 25px;
+
+    border-radius: 12px;
+    cursor: pointer;
+
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.tab-btn:hover{
+    background: var(--color-principal);
+    color: var(--negro);
+}
+
+.tab-btn.active{
+    background: var(--color-principal);
+    color: var(--negro);
+    box-shadow: 0 0 15px var(--color-principal);
+}
+
+/* CONTENIDO */
+
+.tab-content{
+    display: none;
+}
+
+.tab-content.active{
+    display: block;
+}
+
+/* GRID */
+
+.grid-juegos{
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap: 30px;
+
+}
+
+/* CARD */
+
+.card-juego{
+
+    background: var(--glass);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+    backdrop-filter: blur(5px);
+
+}
+
+.card-juego:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--color-principal);
+}
+
+.card-juego img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.contenido{
+    padding: 20px;
+}
+
+.contenido h3{
+    color: var(--color-principal);
+    margin-bottom: 10px;
+}
+
+.contenido p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.contenido button{
+
+    width: 100%;
+
+    border: none;
+
+    background: var(--color-principal);
+
+    color: var(--negro);
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+.contenido button:hover{
+    box-shadow: 0 0 15px var(--color-principal);
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: 80px;
+    padding: 30px;
+    background: var(--negro);
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size: 45px;
+    }
+
+    .hero p{
+        font-size: 18px;
+    }
+
+    .titulo{
+        font-size: 35px;
+    }
+
+}

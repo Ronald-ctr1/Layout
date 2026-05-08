@@ -1,0 +1,212 @@
+:root{
+
+    /* PALETA DE COLORES */
+
+    --color-principal: cyan;
+    --color-secundario: #0f172a;
+    --color-terciario: #111827;
+    --color-cuarto: #1e293b;
+
+    --color-blanco: white;
+    --color-negro: black;
+
+    --glass: rgba(255,255,255,0.08);
+    --glass-input: rgba(255,255,255,0.1);
+
+}
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+body{
+    background: linear-gradient(
+        135deg,
+        var(--color-secundario),
+        var(--color-terciario),
+        var(--color-cuarto)
+    );
+
+    color: var(--color-blanco);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+}
+
+.navbar-brand{
+    color: var(--color-principal) !important;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.nav-link{
+    color: var(--color-blanco) !important;
+    margin-left: 15px;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.nav-link:hover{
+    color: var(--color-principal) !important;
+}
+
+/* BOTONES */
+
+.btn-login{
+    background: var(--color-principal);
+    border: none;
+    color: var(--color-negro);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-login:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--color-principal);
+}
+
+.btn-register{
+    background: transparent;
+    border: 2px solid var(--color-principal);
+    color: var(--color-principal);
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-register:hover{
+    background: var(--color-principal);
+    color: var(--color-negro);
+    box-shadow: 0 0 15px var(--color-principal);
+}
+
+/* CARRUSEL */
+
+.carousel img{
+    height: 100vh;
+    object-fit: cover;
+}
+
+.carousel-caption{
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.carousel-caption h2{
+    font-size: 55px;
+    color: var(--color-principal);
+}
+
+.carousel-caption p{
+    font-size: 20px;
+}
+
+/* TITULOS */
+
+.titulo{
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-principal);
+    font-size: 45px;
+}
+
+/* JUEGOS */
+
+.juegos{
+    padding: 80px 20px;
+}
+
+.card{
+    background: var(--glass);
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px var(--color-principal);
+}
+
+.card img{
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-title{
+    color: var(--color-principal);
+    font-size: 28px;
+}
+
+.precio{
+    font-size: 22px;
+}
+
+.btn-comprar{
+    background: var(--color-principal);
+    color: var(--color-negro);
+    width: 100%;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover{
+    box-shadow: 0 0 15px var(--color-principal);
+}
+
+/* FOOTER */
+
+footer{
+    background: var(--color-negro);
+    text-align: center;
+    padding: 30px;
+}
+
+footer p{
+    margin: 10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .carousel img{
+        height: 400px;
+    }
+
+    .carousel-caption h2{
+        font-size: 30px;
+    }
+
+    .carousel-caption p{
+        font-size: 15px;
+    }
+
+    .titulo{
+        font-size: 35px;
+    }
+
+    .botones{
+        margin-top: 20px;
+    }
+
+}
